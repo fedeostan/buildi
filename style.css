@@ -100,7 +100,18 @@ nav {
     z-index: 100;
     padding: var(--spacing-xs) 0;
     transition: all 0.3s ease;
-    transform: translateY(0);
+    transform: translateY(-100%);
+    animation: slideDown 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 nav.hidden {
@@ -124,6 +135,9 @@ nav .container {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 1.2s;
 }
 
 .nav-links {
@@ -131,6 +145,28 @@ nav .container {
     gap: var(--spacing-lg);
     align-items: center;
     margin: 0 auto;
+}
+
+.nav-link, .auth-buttons .btn {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.nav-link:nth-child(1) { animation-delay: 1.3s; }
+.nav-link:nth-child(2) { animation-delay: 1.4s; }
+.nav-link:nth-child(3) { animation-delay: 1.5s; }
+.auth-buttons .btn:nth-child(1) { animation-delay: 1.6s; }
+.auth-buttons .btn:nth-child(2) { animation-delay: 1.7s; }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .nav-link {
@@ -333,6 +369,21 @@ nav .container {
     align-items: center;
 }
 
+.hero-content h1,
+.hero-content p,
+.hero-content .cta-buttons,
+.trust-badges {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Preload State */
+.preload * {
+    animation-duration: 0s !important;
+    transition: none !important;
+}
+
+/* Animations */
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: 800;
@@ -342,6 +393,9 @@ nav .container {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: var(--spacing-sm);
+    will-change: opacity, transform, visibility;
+    animation: fadeInUp 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 1s;
 }
 
 .hero-content p {
@@ -349,12 +403,45 @@ nav .container {
     color: var(--text-light);
     margin-bottom: var(--spacing-sm);
     max-width: 600px;
+    will-change: opacity, transform, visibility;
+    animation: fadeInUp 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 1.4s;
 }
 
 .hero-content .cta-buttons {
     display: flex;
     gap: var(--spacing-md);
     margin: var(--spacing-sm) 0;
+    will-change: opacity, transform, visibility;
+    animation: fadeInUp 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 1.8s;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: var(--spacing-lg);
+    padding: 2rem 0;
+    background-color: var(--surface);
+    border-radius: 1rem;
+    will-change: opacity, transform, visibility;
+    animation: fadeInUp 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 2.2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 }
 
 /* Features Grid */
@@ -833,6 +920,10 @@ nav .container {
     padding: 2rem 0;
     background-color: var(--surface);
     border-radius: 1rem;
+    opacity: 0;
+    will-change: opacity, transform;
+    animation: fadeInUp 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 2.2s;
 }
 
 .trust-badge {

@@ -17,6 +17,14 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop;
 });
 
+// Add preload class to body
+document.body.classList.add('preload');
+
+// Remove preload class after page loads
+window.addEventListener('load', () => {
+    document.body.classList.remove('preload');
+});
+
 // Mobile Menu Toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
