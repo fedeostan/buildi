@@ -1,21 +1,35 @@
-// Theme Toggle
-const themeToggle = document.querySelector('.theme-toggle');
-const htmlElement = document.documentElement;
+// Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = htmlElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    htmlElement.setAttribute('data-theme', newTheme);
-    themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-    localStorage.setItem('theme', newTheme);
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    // Animate hamburger menu
+    mobileMenuBtn.querySelectorAll('span').forEach((span, index) => {
+        span.style.transform = navLinks.classList.contains('active') 
+            ? index === 1 ? 'scale(0)' : index === 0 ? 'rotate(45deg) translate(5px, 5px)' : 'rotate(-45deg) translate(5px, -5px)'
+            : '';
+    });
 });
 
-// Load saved theme
-const savedTheme = localStorage.getItem('theme') || 'light';
-htmlElement.setAttribute('data-theme', savedTheme);
-themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+// Theme Toggle
+function toggleTheme() {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const html = document.querySelector('html');
+    const currentTheme = html.getAttribute('data-theme');
 
-// Progress Bar
+    if (currentTheme === 'light') {
+        html.setAttribute('data-theme', 'dark');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        html.setAttribute('data-theme', 'light');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+}
+
+document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+
+// Scroll Progress Bar
 const progressBar = document.querySelector('.progress-bar');
 
 window.addEventListener('scroll', () => {
@@ -24,45 +38,20 @@ window.addEventListener('scroll', () => {
     progressBar.style.width = `${scrolled}%`;
 });
 
-// Intersection Observer for reveal animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// Reveal on Scroll Animation
+function reveal() {
+    const reveals = document.querySelectorAll('.reveal-section, .reveal-element, .reveal-text');
+    
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add('active');
         }
     });
-}, observerOptions);
+}
 
-document.querySelectorAll('.reveal-section, .reveal-element, .reveal-text').forEach(el => {
-    observer.observe(el);
-});
-
-// Mobile Menu
-const menuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuBtn.classList.toggle('active');
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-            // Close mobile menu if open
-            navLinks.classList.remove('active');
-            menuBtn.classList.remove('active');
-        }
-    });
-});
+window.addEventListener('scroll', reveal);
+reveal(); // Initial check on page load

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buildi - Modern Business Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,182 +18,170 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">buildi</a>
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#" class="btn secondary">Log In</a>
-                <a href="#" class="btn primary">Download</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Grid Container -->
+    <div class="grid-container">
+        <!-- Header Grid Item -->
+        <header class="grid-item header">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo">buildi</a>
+                    <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-links">
+                        <a href="#features" class="nav-link">Features</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                        <a href="#" class="btn secondary">Log In</a>
+                        <a href="#" class="btn primary">Download</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="hero reveal-section">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="reveal-text">Transform Your Business with Buildi</h1>
-                <p class="reveal-text">The all-in-one platform for modern enterprises</p>
-                <div class="cta-buttons reveal-element">
-                    <a href="#" class="btn primary">Download Now</a>
-                    <a href="#" class="btn secondary">Log In</a>
-                </div>
-            </div>
-            <div class="hero-image reveal-element">
-                <div class="image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Buildi Dashboard">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Builder -->
-    <section class="trust-builder reveal-section">
-        <div class="container">
-            <p class="reveal-text">Trusted by leading companies worldwide</p>
-            <div class="logos reveal-element">
-                <img src="https://via.placeholder.com/150x50?text=Company+1" alt="Company 1" loading="lazy">
-                <img src="https://via.placeholder.com/150x50?text=Company+2" alt="Company 2" loading="lazy">
-                <img src="https://via.placeholder.com/150x50?text=Company+3" alt="Company 3" loading="lazy">
-                <img src="https://via.placeholder.com/150x50?text=Company+4" alt="Company 4" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="features reveal-section">
-        <div class="container">
-            <h2 class="reveal-text">Powerful Features</h2>
-            <div class="features-grid">
-                <div class="feature glass reveal-element">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Advanced Analytics</h3>
-                    <p>Real-time data visualization and business insights</p>
-                </div>
-                <div class="feature glass reveal-element">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Automation</h3>
-                    <p>Streamline workflows with intelligent automation</p>
-                </div>
-                <div class="feature glass reveal-element">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Security</h3>
-                    <p>Enterprise-grade security for your peace of mind</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials reveal-section">
-        <div class="container">
-            <h2 class="reveal-text">What Our Clients Say</h2>
-            <div class="testimonial-cards">
-                <div class="card glass reveal-element">
-                    <p>"Buildi transformed our operations completely. Highly recommended!"</p>
-                    <div class="author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" loading="lazy">
-                        <div>
-                            <h4>Sarah Johnson</h4>
-                            <p>CEO, TechCorp</p>
+        <!-- Main Content Grid Item -->
+        <main class="grid-item main">
+            <!-- Hero Section -->
+            <section class="hero reveal-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="reveal-text">Transform Your Business with Buildi</h1>
+                        <p class="reveal-text">The all-in-one platform for modern enterprises</p>
+                        <div class="cta-buttons reveal-element">
+                            <a href="#" class="btn primary">Download Now</a>
+                            <a href="#" class="btn secondary">Log In</a>
+                        </div>
+                    </div>
+                    <div class="hero-image reveal-element">
+                        <div class="image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Buildi Dashboard">
                         </div>
                     </div>
                 </div>
-                <div class="card glass reveal-element">
-                    <p>"The best business solution we've implemented in years."</p>
-                    <div class="author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" loading="lazy">
-                        <div>
-                            <h4>Michael Chen</h4>
-                            <p>CTO, Innovate Inc</p>
+            </section>
+
+            <!-- Trust Builder -->
+            <section class="trust-builder reveal-section">
+                <div class="container">
+                    <p class="reveal-text">Trusted by leading companies worldwide</p>
+                    <div class="logos reveal-element">
+                        <img src="https://via.placeholder.com/150x50?text=Company+1" alt="Company 1" loading="lazy">
+                        <img src="https://via.placeholder.com/150x50?text=Company+2" alt="Company 2" loading="lazy">
+                        <img src="https://via.placeholder.com/150x50?text=Company+3" alt="Company 3" loading="lazy">
+                        <img src="https://via.placeholder.com/150x50?text=Company+4" alt="Company 4" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section id="features" class="features reveal-section">
+                <div class="container">
+                    <h2 class="reveal-text">Powerful Features</h2>
+                    <div class="features-grid">
+                        <div class="feature glass reveal-element">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Advanced Analytics</h3>
+                            <p>Real-time data visualization and business insights</p>
+                        </div>
+                        <div class="feature glass reveal-element">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Automation</h3>
+                            <p>Streamline workflows with intelligent automation</p>
+                        </div>
+                        <div class="feature glass reveal-element">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Security</h3>
+                            <p>Enterprise-grade security for your peace of mind</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- CTA Section -->
-    <section class="cta reveal-section">
-        <div class="container">
-            <h2 class="reveal-text">Ready to Transform Your Business?</h2>
-            <div class="cta-buttons reveal-element">
-                <a href="#" class="btn primary">Download Now</a>
-                <a href="#" class="btn secondary">Request Demo</a>
-            </div>
-        </div>
-    </section>
+            <!-- Testimonials -->
+            <section id="testimonials" class="testimonials reveal-section">
+                <div class="container">
+                    <h2 class="reveal-text">What Our Clients Say</h2>
+                    <div class="testimonial-cards">
+                        <div class="card glass reveal-element">
+                            <p>"Buildi transformed our operations completely. Highly recommended!"</p>
+                            <div class="author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" loading="lazy">
+                                <div>
+                                    <h4>Sarah Johnson</h4>
+                                    <p>CEO, TechCorp</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card glass reveal-element">
+                            <p>"The best business solution we've implemented in years."</p>
+                            <div class="author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" loading="lazy">
+                                <div>
+                                    <h4>Michael Chen</h4>
+                                    <p>CTO, Innovate Inc</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section reveal-element">
-                    <h3>buildi</h3>
-                    <p>Modern solutions for modern businesses</p>
+            <!-- CTA Section -->
+            <section class="cta reveal-section">
+                <div class="container">
+                    <h2 class="reveal-text">Ready to Transform Your Business?</h2>
+                    <div class="cta-buttons reveal-element">
+                        <a href="#" class="btn primary">Download Now</a>
+                        <a href="#" class="btn secondary">Request Demo</a>
+                    </div>
                 </div>
-                <div class="footer-section reveal-element">
-                    <h4>Product</h4>
-                    <a href="#">Features</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">API</a>
-                </div>
-                <div class="footer-section reveal-element">
-                    <h4>Company</h4>
-                    <a href="#">About</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Contact</a>
-                </div>
-                <div class="footer-section reveal-element">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Security</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Buildi. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+            </section>
+        </main>
 
+        <!-- Footer Grid Item -->
+        <footer class="grid-item footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section reveal-element">
+                        <h3>buildi</h3>
+                        <p>Modern solutions for modern businesses</p>
+                    </div>
+                    <div class="footer-section reveal-element">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">API</a>
+                    </div>
+                    <div class="footer-section reveal-element">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-section reveal-element">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Security</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Buildi. All rights reserved.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html>Since there is no selected code, I will provide a code snippet that can be inserted at the cursor position to improve the existing code. This code snippet adds a JavaScript function to toggle the theme of the website.
-
-```javascript
-// Add this script to the script.js file
-
-// Function to toggle theme
-function toggleTheme() {
-    const themeToggle = document.querySelector('.theme-toggle');
-    const html = document.querySelector('html');
-    const currentTheme = html.getAttribute('data-theme');
-
-    if (currentTheme === 'light') {
-        html.setAttribute('data-theme', 'dark');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-        html.setAttribute('data-theme', 'light');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-}
-
-// Add event listener to theme toggle button
-document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
-```
+</html>
