@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buildi - Modern Business Solutions</title>
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -13,18 +18,13 @@
     <!-- Progress Bar -->
     <div class="progress-bar"></div>
 
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" aria-label="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
-
     <!-- Grid Container -->
     <div class="grid-container">
         <!-- Header Grid Item -->
         <header class="grid-item header">
             <nav>
                 <div class="container">
-                    <a href="#" class="logo">buildi</a>
+                    <a href="/" class="logo"></a>
                     <button class="mobile-menu-btn" aria-label="Toggle Menu">
                         <span></span>
                         <span></span>
@@ -35,7 +35,7 @@
                         <a href="about.html" class="nav-link">About</a>
                         <a href="#testimonials" class="nav-link">Testimonials</a>
                         <a href="#" class="btn secondary">Log In</a>
-                        <a href="#" class="btn primary">Download</a>
+                        <a href="#" class="btn primary">Get Started <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </nav>
@@ -48,10 +48,21 @@
                 <div class="container">
                     <div class="hero-content">
                         <h1 class="reveal-text">Transform Your Business with Buildi</h1>
-                        <p class="reveal-text">The all-in-one platform for modern enterprises</p>
+                        <p class="reveal-text">The all-in-one platform for modern enterprises. Streamline workflows, boost productivity, and achieve more together.</p>
                         <div class="cta-buttons reveal-element">
-                            <a href="#" class="btn primary">Download Now</a>
-                            <a href="#" class="btn secondary">Log In</a>
+                            <a href="#" class="btn primary">Get Started Free <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn secondary">Watch Demo <i class="fas fa-play"></i></a>
+                        </div>
+                        <div class="trust-badges">
+                            <div class="trust-badge">
+                                <img src="img/logos/microsoft.svg" alt="Microsoft" width="120" height="40">
+                            </div>
+                            <div class="trust-badge">
+                                <img src="img/logos/google.svg" alt="Google" width="120" height="40">
+                            </div>
+                            <div class="trust-badge">
+                                <img src="img/logos/amazon.svg" alt="Amazon" width="120" height="40">
+                            </div>
                         </div>
                     </div>
                     <div class="hero-image reveal-element">
@@ -62,38 +73,26 @@
                 </div>
             </section>
 
-            <!-- Trust Builder -->
-            <section class="trust-builder reveal-section">
-                <div class="container">
-                    <p class="reveal-text">Trusted by leading companies worldwide</p>
-                    <div class="logos reveal-element">
-                        <img src="https://via.placeholder.com/150x50?text=Company+1" alt="Company 1" loading="lazy">
-                        <img src="https://via.placeholder.com/150x50?text=Company+2" alt="Company 2" loading="lazy">
-                        <img src="https://via.placeholder.com/150x50?text=Company+3" alt="Company 3" loading="lazy">
-                        <img src="https://via.placeholder.com/150x50?text=Company+4" alt="Company 4" loading="lazy">
-                    </div>
-                </div>
-            </section>
-
             <!-- Features -->
             <section id="features" class="features reveal-section">
                 <div class="container">
-                    <h2 class="reveal-text">Powerful Features</h2>
+                    <h2 class="reveal-text">Powerful Features for Modern Teams</h2>
+                    <p class="section-description reveal-text">Everything you need to manage projects, collaborate with your team, and achieve your goals.</p>
                     <div class="features-grid">
                         <div class="feature glass reveal-element">
                             <i class="fas fa-chart-line"></i>
                             <h3>Advanced Analytics</h3>
-                            <p>Real-time data visualization and business insights</p>
+                            <p>Get real-time insights into your team's performance and project progress with powerful analytics tools.</p>
                         </div>
                         <div class="feature glass reveal-element">
                             <i class="fas fa-cogs"></i>
-                            <h3>Automation</h3>
-                            <p>Streamline workflows with intelligent automation</p>
+                            <h3>Smart Automation</h3>
+                            <p>Automate repetitive tasks and streamline workflows with our intelligent automation features.</p>
                         </div>
                         <div class="feature glass reveal-element">
                             <i class="fas fa-shield-alt"></i>
-                            <h3>Security</h3>
-                            <p>Enterprise-grade security for your peace of mind</p>
+                            <h3>Enterprise Security</h3>
+                            <p>Keep your data safe with enterprise-grade security features and compliance certifications.</p>
                         </div>
                     </div>
                 </div>
@@ -102,12 +101,14 @@
             <!-- Testimonials -->
             <section id="testimonials" class="testimonials reveal-section">
                 <div class="container">
-                    <h2 class="reveal-text">What Our Clients Say</h2>
+                    <h2 class="reveal-text">Trusted by Industry Leaders</h2>
+                    <p class="section-description reveal-text">See how Buildi is transforming businesses worldwide</p>
                     <div class="testimonial-cards">
                         <div class="card glass reveal-element">
-                            <p>"Buildi transformed our operations completely. Highly recommended!"</p>
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"Buildi transformed our operations completely. The automation features alone saved us 20 hours per week. Highly recommended!"</p>
                             <div class="author">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Sarah Johnson" width="60" height="60" loading="lazy">
                                 <div>
                                     <h4>Sarah Johnson</h4>
                                     <p>CEO, TechCorp</p>
@@ -115,9 +116,10 @@
                             </div>
                         </div>
                         <div class="card glass reveal-element">
-                            <p>"The best business solution we've implemented in years."</p>
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"The best business solution we've implemented in years. The analytics dashboard gives us insights we never had before."</p>
                             <div class="author">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Michael Chen" width="60" height="60" loading="lazy">
                                 <div>
                                     <h4>Michael Chen</h4>
                                     <p>CTO, Innovate Inc</p>
@@ -132,9 +134,10 @@
             <section class="cta reveal-section">
                 <div class="container">
                     <h2 class="reveal-text">Ready to Transform Your Business?</h2>
+                    <p class="section-description reveal-text">Join thousands of companies already using Buildi to achieve more.</p>
                     <div class="cta-buttons reveal-element">
-                        <a href="#" class="btn primary">Download Now</a>
-                        <a href="#" class="btn secondary">Request Demo</a>
+                        <a href="#" class="btn primary">Get Started Free <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="btn secondary">Schedule Demo <i class="fas fa-calendar"></i></a>
                     </div>
                 </div>
             </section>
@@ -147,34 +150,37 @@
                     <div class="footer-section reveal-element">
                         <h3>buildi</h3>
                         <p>Modern solutions for modern businesses</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                     <div class="footer-section reveal-element">
                         <h4>Product</h4>
                         <a href="#">Features</a>
                         <a href="#">Pricing</a>
                         <a href="#">API</a>
+                        <a href="#">Integrations</a>
                     </div>
                     <div class="footer-section reveal-element">
                         <h4>Company</h4>
                         <a href="#">About</a>
                         <a href="#">Careers</a>
                         <a href="#">Contact</a>
+                        <a href="#">Blog</a>
                     </div>
                     <div class="footer-section reveal-element">
                         <h4>Legal</h4>
                         <a href="#">Privacy</a>
                         <a href="#">Terms</a>
                         <a href="#">Security</a>
+                        <a href="#">GDPR</a>
                     </div>
                 </div>
                 <div class="footer-bottom">
                     <p>&copy; 2023 Buildi. All rights reserved.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
             </div>
         </footer>
