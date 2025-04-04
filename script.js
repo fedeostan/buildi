@@ -21,9 +21,33 @@ window.addEventListener('scroll', () => {
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenuBtn.classList.toggle('active');
-    navLinks.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', () => {
+    mobileMenuBtn.addEventListener('click', () => {
+        // Toggle active class on button and menu
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+
+        // Toggle between bars and times icon
+        const icon = mobileMenuBtn.querySelector('i');
+        if (mobileMenuBtn.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
 });
 
 // Scroll Progress Bar
